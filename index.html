@@ -9,8 +9,20 @@
 <body>
   <header class="app-header">
     <div class="app-header__content">
-      <h1>DevTasks</h1>
-      <p>Organize suas tarefas de desenvolvimento de forma simples e rápida.</p>
+      <div class="app-header__title-row">
+        <div>
+          <h1>DevTasks</h1>
+          <p>Organize suas tarefas de desenvolvimento de forma simples e rápida.</p>
+        </div>
+        <button
+          id="theme-toggle"
+          class="btn btn--ghost btn--icon"
+          type="button"
+          aria-label="Alternar tema"
+        >
+          🌙
+        </button>
+      </div>
     </div>
   </header>
 
@@ -27,26 +39,48 @@
             required
           />
         </div>
+
+        <div class="task-form__field task-form__field--priority">
+          <label for="task-priority">Prioridade</label>
+          <select id="task-priority" name="task-priority">
+            <option value="medium" selected>Média</option>
+            <option value="high">Alta</option>
+            <option value="low">Baixa</option>
+          </select>
+        </div>
+
         <button type="submit" class="btn btn--primary">Adicionar</button>
       </form>
 
       <div class="task-toolbar">
         <span class="task-count" id="task-count">0 tarefas</span>
-        <div class="task-filters">
-          <button class="btn btn--ghost btn-filter active" data-filter="all">
-            Todas
-          </button>
-          <button class="btn btn--ghost btn-filter" data-filter="pending">
-            Pendentes
-          </button>
-          <button class="btn btn--ghost btn-filter" data-filter="done">
-            Concluídas
-          </button>
+
+        <div class="task-toolbar__right">
+          <div class="task-search">
+            <input
+              type="text"
+              id="task-search"
+              placeholder="Buscar tarefas..."
+              aria-label="Buscar tarefas"
+            />
+          </div>
+
+          <div class="task-filters">
+            <button class="btn btn--ghost btn-filter active" data-filter="all">
+              Todas
+            </button>
+            <button class="btn btn--ghost btn-filter" data-filter="pending">
+              Pendentes
+            </button>
+            <button class="btn btn--ghost btn-filter" data-filter="done">
+              Concluídas
+            </button>
+          </div>
         </div>
       </div>
 
       <ul id="task-list" class="task-list">
-        <!-- Tarefas serão inseridas aqui via JS -->
+        <!-- Tarefas via JS -->
       </ul>
 
       <div class="task-actions">
@@ -59,7 +93,7 @@
 
   <footer class="app-footer">
     <p>
-      Feito por <strong>Murilo Baron</strong> ·
+      Feito por <strong>Murilo-Baron</strong> ·
       <a href="https://github.com/Murilo-Baron" target="_blank" rel="noreferrer">
         GitHub
       </a>
