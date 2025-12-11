@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>DevTasks - Gerenciador de Tarefas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="app-header__content">
+      <h1>DevTasks</h1>
+      <p>Organize suas tarefas de desenvolvimento de forma simples e rápida.</p>
+    </div>
+  </header>
+
+  <main class="app-main">
+    <section class="card">
+      <form id="task-form" class="task-form">
+        <div class="task-form__field">
+          <label for="task-title">Nova tarefa</label>
+          <input
+            type="text"
+            id="task-title"
+            name="task-title"
+            placeholder="Ex.: Estudar React, corrigir bug do login..."
+            required
+          />
+        </div>
+        <button type="submit" class="btn btn--primary">Adicionar</button>
+      </form>
+
+      <div class="task-toolbar">
+        <span class="task-count" id="task-count">0 tarefas</span>
+        <div class="task-filters">
+          <button class="btn btn--ghost btn-filter active" data-filter="all">
+            Todas
+          </button>
+          <button class="btn btn--ghost btn-filter" data-filter="pending">
+            Pendentes
+          </button>
+          <button class="btn btn--ghost btn-filter" data-filter="done">
+            Concluídas
+          </button>
+        </div>
+      </div>
+
+      <ul id="task-list" class="task-list">
+        <!-- Tarefas serão inseridas aqui via JS -->
+      </ul>
+
+      <div class="task-actions">
+        <button id="clear-completed" class="btn btn--danger btn--small">
+          Limpar concluídas
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <p>
+      Feito por <strong>Murilo Baron</strong> ·
+      <a href="https://github.com/Murilo-Baron" target="_blank" rel="noreferrer">
+        GitHub
+      </a>
+    </p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
