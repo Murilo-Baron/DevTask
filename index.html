@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <title>DevTasks - Gerenciador de Tarefas</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./style.css" />
   <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+  <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
   <header class="app-header">
@@ -67,13 +67,13 @@
           </div>
 
           <div class="task-filters">
-            <button class="btn btn--ghost btn-filter active" data-filter="all">
+            <button class="btn btn--ghost btn-filter active" type="button" data-filter="all">
               Todas
             </button>
-            <button class="btn btn--ghost btn-filter" data-filter="pending">
+            <button class="btn btn--ghost btn-filter" type="button" data-filter="pending">
               Pendentes
             </button>
-            <button class="btn btn--ghost btn-filter" data-filter="done">
+            <button class="btn btn--ghost btn-filter" type="button" data-filter="done">
               Concluídas
             </button>
           </div>
@@ -85,7 +85,7 @@
       </ul>
 
       <div class="task-actions">
-        <button id="clear-completed" class="btn btn--danger btn--small">
+        <button id="clear-completed" class="btn btn--danger btn--small" type="button">
           Limpar concluídas
         </button>
       </div>
@@ -101,6 +101,6 @@
     </p>
   </footer>
 
-  <script src=./script.js"></script>
+  <script src="./script.js"></script>
 </body>
 </html>
