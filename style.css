@@ -489,10 +489,60 @@ body {
 /* RESPONSIVO */
 
 @media (max-width: 640px) {
-  .card {
-    padding: 1.1rem 0.9rem 0.9rem;
+  body {
+    font-size: 15px;
   }
 
+  .app-header {
+    padding: 1.4rem 1rem 0.3rem;
+  }
+
+  .app-header__content {
+    max-width: 100%;
+  }
+
+  .app-header__title-row {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .app-header h1 {
+    font-size: 1.7rem;
+  }
+
+  .app-header p {
+    font-size: 0.9rem;
+  }
+
+  .app-main {
+    padding: 0 0.8rem 1.2rem;
+  }
+
+  .card {
+    padding: 1rem 0.9rem 0.9rem;
+    border-radius: 18px;
+  }
+
+  /* form em coluna */
+  .task-form {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.6rem;
+  }
+
+  .task-form__field,
+  .task-form__field--priority {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .btn--primary {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* toolbar em coluna */
   .task-toolbar {
     flex-direction: column;
     align-items: flex-start;
@@ -518,18 +568,37 @@ body {
     flex-wrap: wrap;
   }
 
+  /* cards das tarefas mais compactos */
   .task-item {
     align-items: flex-start;
-    padding: 0.7rem 0.75rem;
+    padding: 0.65rem 0.7rem;
+    gap: 0.7rem;
   }
 
   .task-item__title {
-    font-size: 0.92rem;
+    font-size: 0.9rem;
   }
 
   .task-item__meta {
-    font-size: 0.65rem;
+    font-size: 0.7rem;
     flex-direction: column;
     align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  .task-item__checkbox {
+    width: 18px;
+    height: 18px;
+  }
+
+  .task-item__delete {
+    width: 24px;
+    height: 24px;
+    font-size: 0.85rem;
+  }
+
+  .app-footer {
+    padding-inline: 1rem;
+    font-size: 0.72rem;
   }
 }
